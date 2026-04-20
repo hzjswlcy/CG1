@@ -26,7 +26,7 @@
    - **Ambient**: $$I_{ambient} = K_a \times C_{light} \times C_{object}$$
    - **Diffuse**: $$I_{diffuse} = K_d \times \max(0, \mathbf{N} \cdot \mathbf{L}) \times C_{light} \times C_{object}$$
    - **Specular**: $$I_{specular} = K_s \times \max(0, \mathbf{R} \cdot \mathbf{V})^n \times C_{light}$$
-   (PS：\mathbf{N}为表面法向量，\mathbf{L}为指向光源的方向向量，\mathbf{V}为指向摄像机的方向向量，\mathbf{R}为光线的理想反射向量，n 为高光指数 Shininess)
+   (PS：$\mathbf{N}$ 为表面法向量，$\mathbf{L}$ 为指向光源的方向向量，$\mathbf{V}$ 为指向摄像机的方向向量，$\mathbf{R}$ 为光线的理想反射向量，$n$ 为高光指数 Shininess)
 3. **效果实现**：
    - 每一帧渲染时，为每个像素分配一个线程。
    - 线程生成射线，遍历场景物体，记录最近的交点 `min_t`。
